@@ -1000,7 +1000,7 @@ jmp cost를 줄임. sweet point가 있음.
 <br>
 
 여러 소프트웨어 알고리즘으로 가속해보자.  
-<img src="../Docs/Pasted image 20240430164950.png" width="600">
+<img src="Docs/Pasted image 20240430164950.png" width="600">
   
 
 <br>
@@ -1020,7 +1020,7 @@ BF15 FP16의 문제, 정밀도를 떨어트리더라도 range를 같이 하고 �
 
 <br>
 
-<img src="../Docs/Pasted image 20240502173228.png" width="600">
+<img src="Docs/Pasted image 20240502173228.png" width="600">
   
 Volta: $`4 \times 4 \times 4`$ 행렬 곱셈을 1 clock  
 Ampere: $`8 \times 4 \times 8`$ 행렬 곱셈을 1clock  
@@ -1053,7 +1053,7 @@ reference
 
 <br>
 
-<img src="../Docs/matrix-multiplication-without-shared-memory.png" width="300">
+<img src="https://docs.nvidia.com/cuda/cuda-c-programming-guide/_images/matrix-multiplication-without-shared-memory.png" width="300">
   
 
 <br>
@@ -1196,7 +1196,7 @@ cudaMemcpyAsync()
 
 #### Virtual Memory  
 > 물리적 Memory의 한계를 "숨기기"위해 가상의 메모리 영역을 할당하는 것.  
-<img src="../Docs/Pasted image 20240514174140.png" width="400">
+<img src="Docs/Pasted image 20240514174140.png" width="400">
   
 - Pageable data transfer:  
 pinned로 옮겨지고 transfer된다.  
@@ -1555,7 +1555,7 @@ cudaEventSymchronize(stop);
 - 246-280(..?): `cudaStreamWaitEvent`를 사용하여 dependency를 주고 있다.  
 올바르게 작동한다.  
 약 25ms  
-<img src="../Docs/Pasted image 20240528172431.png" width="600">
+<img src="Docs/Pasted image 20240528172431.png" width="600">
   
 - `test_2() - Non-null Streams with Dependency`:  
 이제 $`K_S`$와 $`K_A`$ 모두 보자.  
@@ -1563,11 +1563,11 @@ cudaEventSymchronize(stop);
 - S2와 S3는 K수행 후 바로 Host로 가져올 수 있는데 죽치고 기다리고 있는 것을 볼 수 있다. 이게 5ms 차이의 이유이다. 즉, 27, 28번 명령어는 dependency가 없는데도 늦게 수행되는 것이다.  
 - D2H 대기의 이유:`실제로 같은 종류의 명령어들끼리 순서를 이루어서 한 queue로 들어가는 것 같다고 추청 중`  
 약 45ms  
-<img src="../Docs/Pasted image 20240528174047.png" width="500">
+<img src="Docs/Pasted image 20240528174047.png" width="500">
   
 - `test_3() - Non-null Streams with Dependency`:  
 약 40ms  
-<img src="../Docs/Pasted image 20240528174114.png" width="500">
+<img src="Docs/Pasted image 20240528174114.png" width="500">
   
 
 <br>
@@ -1648,7 +1648,7 @@ OpenGL Shaders: Gaussian Filtering
 
 <br>
 
-<img src="../Docs/1130D84E4F3505ED06" width="400">
+<img src="https://t1.daumcdn.net/cfile/blog/1130D84E4F3505ED06" width="400">
   
 사진을 흑백화하는 공식은 다음과 같다. (위에서의 Y 값을 계산하는 것이다.)
 <br>
@@ -1791,8 +1791,8 @@ void sequential_scan(float *x, float *y, unsigned int N) {
 
 <br>
 
-<img src="../Docs/img.png" width="300">
- <img src="../Docs/img.png" width="300">
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbn5AVM%2FbtqDjGkqYp7%2F570YCnFZjlChIAytB8y8Pk%2Fimg.png" width="300">
+ <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FEmWlt%2FbtqDmVNGgZj%2FYYbhW6uBX1DDV95Hz2tqPk%2Fimg.png" width="300">
   
 #### Signed Distance Field  
 > 공간을 discretize화해서 표현하는 것이다.  
@@ -1814,20 +1814,20 @@ void sequential_scan(float *x, float *y, unsigned int N) {
 
 Input Data  
 iso value = 4라고 했을 때, 다음과 같이 표면을 찾을 수 있다.  
-<img src="../Docs/Pasted image 20240611170626.png" width="300">
+<img src="Docs/Pasted image 20240611170626.png" width="300">
   
 
 <br>
 
 output surface  
-<img src="../Docs/Pasted image 20240611170736.png" width="300">
+<img src="Docs/Pasted image 20240611170736.png" width="300">
   
 하나하나 square를 marching하면서 계산하기 때문에 marching square라고 한다.  
 
 <br>
 
 3차원 공간에서는 다음과 같이 표현이 된다.  
-<img src="../Docs/Pasted image 20240611170829.png" width="300">
+<img src="Docs/Pasted image 20240611170829.png" width="300">
   
 하나하나 cube를 marching하면서 계산하기 때문에 marching cube라고 한다.  
 흰색: iso value보다 큼  
@@ -1838,12 +1838,12 @@ output surface
 <br>
 
 총 256가지 경우가 나올 수 있는데, 테트리스 처럼 대칭을 제하고 나면 다음과 같이 15가지 경우가 나온다.  
-<img src="../Docs/Pasted image 20240611171243.png" width="500">
+<img src="Docs/Pasted image 20240611171243.png" width="500">
   
 
 <br>
 
-<img src="../Docs/Pasted image 20240611171357.png" width="500">
+<img src="Docs/Pasted image 20240611171357.png" width="500">
   
 점 사이의 Iso Value에 해당하는 값을 찾기 위해 다음과 같은 선형 보간 식을 쓴다는 것에 의의는 없을 것이다.
 <br>
@@ -1930,7 +1930,7 @@ __device__ uint3 calcGridPos(uint i, uint3 gridSizeShift, uing3 gridSizeMask) {
 <br>
 
 #### Marching Square  
-<img src="../Docs/Pasted image 20240613164938.png" width="200">
+<img src="Docs/Pasted image 20240613164938.png" width="200">
   
 - 각각의 cell에서 나올 수 있는 선분의 종류는 총 16개인 것을 알 수 있다.  
 ```  

@@ -5,7 +5,7 @@
 <br>
 
 ##### glTF 2.0 Scene Description Stucture  
-<img src="../Docs/2020-core-gltf-2-0-asset-structure.jpg" width="600">
+<img src="https://www.khronos.org/assets/uploads/apis/2020-core-gltf-2-0-asset-structure.jpg" width="600">
   
 - `.gltf(JSON)`:   
 - Node 구조  
@@ -23,13 +23,13 @@
 - Inverse-bind metrices는 각각의 bone에 대해 정의된 변환 행렬들의 역행렬이다. LC에서 MC로 갈 때 모델의 각 vertex에 대해 적용되는 계산을 할 때 역행렬이 필요하다.  
 - `.png, .jpg, .ktx2`: 텍스쳐 데이터들  
 ##### glTF Ecosystem  
-<img src="../Docs/2019-gltf-ecosystem_1_21.jpg" width="600">
+<img src="https://www.khronos.org/assets/uploads/apis/2019-gltf-ecosystem_1_21.jpg" width="600">
   
 
 <br>
 
 ##### Industry Support for glTF  
-<img src="../Docs/2017-gltf-20-launch-3_26.jpg" width="600">
+<img src="https://www.khronos.org/assets/uploads/apis/2017-gltf-20-launch-3_26.jpg" width="600">
   
 
 <br>
@@ -95,7 +95,7 @@ glTF의 코어는 **JSON 파일**의 형태로 3D 모델들을 포함하고 있�
 <br>
 
 다음은 Top-Level 요소간의 관계를 시각화 한것이다. `뭔가 많다.. 복잡하다..`  
-<img src="../Docs/Pasted image 20240701161627.png" width="350">
+<img src="Docs/Pasted image 20240701161627.png" width="350">
   
 
 <br>
@@ -140,9 +140,9 @@ MIME 타입 `data:MIMtype`을 정의하고, base64 `base64,string` 형식으로 
 #### Hierarchy  
 glTF에서 각각의 **Scene**은 **Node**의 인덱스 배열을 포함하고,    
 각각의 **Node**는 그 **Chidren**의 인덱스 배열을 포함한다.  
-<img src="../Docs/Pasted image 20240701172826.png" width="200">
+<img src="Docs/Pasted image 20240701172826.png" width="200">
   
-<img src="../Docs/Pasted image 20240701172858.png" width="200">
+<img src="Docs/Pasted image 20240701172858.png" width="200">
   
 
 <br>
@@ -245,7 +245,7 @@ Node들은 Vertex Skinning에 쓰이기도 하는데, 움직이는 모델의 Ske
 Type Perspective의 각 요소에 관한 내용은 다음을 상기하자.  
 #### Setup for Viewing Volume  
 > `glm::mat4 perspective(float fovy, float aspect, float zNear, float zFar);`  
-<img src="../Docs/Pasted image 20240514123644.png" width="400">
+<img src="Docs/Pasted image 20240514123644.png" width="400">
   
 - `fovy`: 위 아래 각도  
 - `aspect`: $`w/h`$ 가로 세로 비율  
@@ -257,7 +257,7 @@ Type Perspective의 각 요소에 관한 내용은 다음을 상기하자.
 Type Orthographic의 각 요소에 관한 내용은 다음을 상기하자.  
 #### Setup for Viewing Volume  
 > glm::mat4 glm::ortho(float left, float right, float bottom, float top, float zNear, float zFar);  
-<img src="../Docs/Pasted image 20240514123606.png" width="400">
+<img src="Docs/Pasted image 20240514123606.png" width="400">
   
 - `left, bottom`: 왼쪽 아래 꼭짓점  
 - `right, top`: 오른쪽 위 꼭짓점  
@@ -279,7 +279,7 @@ Camera의 Matrix, 다른 말로 **Projection Transformation**, 기호로 $`M_P`$
 - **Rendering Mode**: `POINT`, `LINES`, `TRIANCLES` 중 어느 모드로 렌더링할지 상수로 표기한다.  
 - **Indices**: 해당 data의 Accessor의 인덱스를 통해 참조  
 - **Attributes**: 해당 data의 Accessor의 인덱스를 통해 참조하며, 다음과 같이 정보가 저장되어있다.  
-<img src="../Docs/Pasted image 20240701190936.png" width="400">
+<img src="Docs/Pasted image 20240701190936.png" width="400">
   
 - **Meterial**: 관련 Meterial의 인덱스  
 ```json  
@@ -305,7 +305,7 @@ Camera의 Matrix, 다른 말로 **Projection Transformation**, 기호로 $`M_P`$
 #### Deformation - Morph Targets  
 Mesh는 또한 **Morph Target**을 여러개 만들어 Mesh의 변형을 묘사할 수 있다.    
 여기서 변형이란 다음과 같은 것이다.  
-<img src="../Docs/tutorial-image.jpg" width="200">
+<img src="https://catlikecoding.com/unity/tutorials/mesh-deformation/tutorial-image.jpg" width="200">
   
 
 <br>
@@ -466,14 +466,14 @@ Accessor의 몇몇 부분만 디폴트값과 다른 경우(대부분의 경우�
  }
 ]
 ```  
-<img src="../Docs/Pasted image 20240702161253.png" width="300">
+<img src="Docs/Pasted image 20240702161253.png" width="300">
   
 그러니까 value array를 indices array를 통하여 access 하는 것이다.  
 
 <br>
 
 #### Complete Overview  
-<img src="../Docs/Pasted image 20240702143554.png" width="450">
+<img src="Docs/Pasted image 20240702143554.png" width="450">
   
 위 사진에선 mesh primitive로 쓰이는 2D 텍스처 좌표를 접근하는 예시이다.    
 **glBindBuffer**로   
@@ -501,7 +501,7 @@ glVertexAttribPointer: 현재 바인딩된 버퍼에서 vertex 속성 데이터�
 <br>
 
 #### Metallic-Roughness-Model  
-<img src="../Docs/Pasted image 20240703131025.png" width="300">
+<img src="Docs/Pasted image 20240703131025.png" width="300">
   
 기본적으로 사용하는 Meterial Model은 Metallic-Roughness-Model이다.    
 위 표에서 보는 것처럼, $`[0.0, 1.0] \times [0.0, 1.0]`$ 까지의 값으로 거칠기와 금속성을 표시한다.    
@@ -551,7 +551,7 @@ glVertexAttribPointer: 현재 바인딩된 버퍼에서 vertex 속성 데이터�
 <br>
 
 #### Meterial Properties in Textures  
-<img src="../Docs/Pasted image 20240703135444.png" width="600">
+<img src="Docs/Pasted image 20240703135444.png" width="600">
   
 Meterial에서도 마찬가지로 Textures를 참조할 때 인덱스로 참조한다.    
 ```json  
@@ -663,7 +663,7 @@ glTF에서 Skinning은 Rigging이 되어있다는 전제 하에 돌아가는 것
 
 <br>
 
-<img src="../Docs/Pasted image 20240703190129.png" width="150">
+<img src="Docs/Pasted image 20240703190129.png" width="150">
   
 
 <br>
@@ -749,9 +749,9 @@ glTF에서 Skinning은 Rigging이 되어있다는 전제 하에 돌아가는 것
 <br>
 
 먼저 사진으로 개념을 잡고가자면 다음과 같다.  
-<img src="../Docs/Pasted image 20240703191629.png" width="150">
-<img src="../Docs/Pasted image 20240703191648.png" width="192">
-<img src="../Docs/Pasted image 20240703191710.png" width="600">
+<img src="Docs/Pasted image 20240703191629.png" width="150">
+<img src="Docs/Pasted image 20240703191648.png" width="192">
+<img src="Docs/Pasted image 20240703191710.png" width="600">
   
 
 <br>
@@ -838,7 +838,7 @@ Morph Target의 Weight에 영향을 주어 물체에 변형을 일으킬 수도 
 <br>
 
 #### Animation Samplers  
-<img src="../Docs/Pasted image 20240704133344.png" width="600">
+<img src="Docs/Pasted image 20240704133344.png" width="600">
   
 만약 키 프레임 시간이 0.8, 1.6이고 그 사이의 값인 1.2가 input으로 지정되었을 때,    
 지정한 보간 법에 따라 Interpolation이 일어난다.  
@@ -846,11 +846,11 @@ Morph Target의 Weight에 영향을 주어 물체에 변형을 일으킬 수도 
 <br>
 
 #### Animation Channel Targets  
-<img src="../Docs/Pasted image 20240704133409.png" width="400">
+<img src="Docs/Pasted image 20240704133409.png" width="400">
   
-<img src="../Docs/Pasted image 20240704133423.png" width="400">
+<img src="Docs/Pasted image 20240704133423.png" width="400">
   
-<img src="../Docs/Pasted image 20240704133445.png" width="400">
+<img src="Docs/Pasted image 20240704133445.png" width="400">
   
 
 <br>
@@ -916,15 +916,15 @@ glTF에는 여러 함수를 추가할 수 있는 **Extension**들이 존재한�
 ![](../../../Z.%20Docs/img/Pasted%20image%2020240704140518.png)  
 Draco로 압축하거나,    
 Point Light, Spot light, Directional Light를 지원하고나,  
-<img src="../Docs/carbonComp0-1024x508.png" width="200">
+<img src="https://www.kitware.com/main/wp-content/uploads/2021/01/carbonComp0-1024x508.png" width="200">
  (PBR objext Clear Coating)    
 투명한 물체의 굴절률을 확장하던가,    
 색상이 시야각에 따라 달라지는 박막효과 모델링이라던가,    
 천섬유로 인한 후방산란에 대한 색상 파라미터를 추가하거나,    
 Specular 반사 파라미터에 색상과 강도를 추가하던가,    
-<img src="../Docs/Universal-GPU-Compressed-Textures.png" width="400">
+<img src="https://www.khronos.org/assets/uploads/apis/Universal-GPU-Compressed-Textures.png" width="400">
  (KTX v2)  
-<img src="../Docs/450px-Stefan-Morrell_modular-texture.jpg" width="400">
+<img src="http://wiki.polycount.com/w/images/thumb/1/15/Stefan-Morrell_modular-texture.jpg/450px-Stefan-Morrell_modular-texture.jpg" width="400">
  (Texture Atlases)  
 등등...  
 어쨌든 뭐 여러가지 기능이 존재하는 것 같다.  
