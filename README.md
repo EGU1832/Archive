@@ -31,5 +31,5 @@ Archive/
 
 ## ©️ License
 
-**Lecture notes** are lecture notes from **Sogang University** respectively, some of the **Tistory, Velog** text have been referenced, so please keep this in mind when looking at the notes.
+**Lecture notes** are lecture notes from **Sogang University** respectively, some of the **Tistory, Velog** text have been referenced, so please keep this in mind when looking at the notes.  
 **Other Notes** Feel free to refer to or copy.
