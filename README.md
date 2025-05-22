@@ -9,11 +9,11 @@ This is **Archive Repository** for Lecture Note or In Nutshell about Various Sub
 
 ``` plaintext
 Archive/
-├── Docs/                   /* Referenced Images for Notes */
-├─- {AAA}{0000}.md              /* Lecture Note of Sogang Univ. */
-├── {Topic}.md    /* In Nutshell about Subject */
+├── Docs/              /* Referenced Images for Notes */
+├─- {AAA}{0000}.md     /* Lecture Note of Sogang Univ. */
+├── {Topic}.md         /* In Nutshell about Subject */
 ├─- ..
-└─- README.md               /* README */
+└─- README.md          /* README */
 ```
 
 ## ✏️ Note Information
